@@ -14,7 +14,7 @@ public class HraSachovniceRandom extends HraSachovnice {
     public void execute() {
         int moveCount = getMoveCount();
         while(moveCount != 0) {
-            super.game.move(getMove(generateMove()));
+            game.move(getMove(generateMove()));
             moveCount--;
         }
 

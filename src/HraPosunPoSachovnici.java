@@ -54,9 +54,9 @@ public class HraPosunPoSachovnici {
                 case RIGHT -> this.x += 1;
             }
             history.add(new Point(this.x, this.y));
-        } /*else {
+        } else {
             System.out.println("Can't move.");
-        }*/
+        }
     }
 
     public Object clone() throws CloneNotSupportedException {

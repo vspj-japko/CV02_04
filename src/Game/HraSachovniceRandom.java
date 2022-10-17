@@ -1,8 +1,12 @@
+package Game;
+
+import Utils.InputReader;
+
 import java.util.Random;
 
 public class HraSachovniceRandom extends HraSachovnice {
 
-    public HraSachovniceRandom(int nx, int ny) {
+    public HraSachovniceRandom(byte nx, byte ny) {
         super(nx, ny);
     }
 
@@ -14,11 +18,11 @@ public class HraSachovniceRandom extends HraSachovnice {
     public void execute() {
         int moveCount = getMoveCount();
         while(moveCount != 0) {
-            game.move(getMove(generateMove()));
+            getGame().move(getMove(generateMove()));
             moveCount--;
         }
 
-        System.out.println(game.getHistoryAsString());
+        System.out.println(getGame().getHistoryAsString());
     }
 
     private int getMoveCount() {

@@ -1,13 +1,16 @@
+package Game;
+
+import Utils.Direction;
+
 public abstract class HraSachovnice {
 
-    protected final HraPosunPoSachovnici game;
-
+    private final HraPosunPoSachovnici game;
 
     public HraSachovnice() {
-        this(8,8);
+        this((byte)8,(byte)8);
     }
 
-    public HraSachovnice(int nx, int ny) {
+    public HraSachovnice(byte nx, byte ny) {
         this.game = new HraPosunPoSachovnici(nx, ny);
     }
 
@@ -29,5 +32,9 @@ public abstract class HraSachovnice {
             }
             default -> { return Direction.NULL; }
         }
+    }
+
+    protected HraPosunPoSachovnici getGame() {
+        return this.game;
     }
 }
